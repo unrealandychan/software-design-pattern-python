@@ -19,3 +19,12 @@ class FunctionalHelper:
         for i in arr:
             result = func(result, i)
         return result
+
+
+FunctionalHelper.forEach([1, 2, 3, 4, 5], lambda x: print(x))
+double = FunctionalHelper.map([1, 2, 3, 4, 5], lambda x: x * 2)
+print(double)
+even = FunctionalHelper.filter([1, 2, 3, 4, 5], lambda x: x % 2 == 0)
+print(even)
+total = FunctionalHelper.reduce([1, 2, 3, 4, 5], lambda acc, val: acc + val, 0)
+print(total)
